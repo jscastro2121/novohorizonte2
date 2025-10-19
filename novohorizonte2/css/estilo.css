@@ -1,0 +1,198 @@
+:root {
+  --bg-beige: #F5F2EB;
+  --bg-blue: #E9F1F7;
+  --text: #222;
+  --muted: #6B6B6B;
+  --accent: #A33;
+  --dark: #1C1C1C;
+  --max-width: 900px;
+}
+
+html, body {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Lora', Georgia, serif;
+  color: var(--text);
+  background: #fff;
+  line-height: 1.6;
+}
+
+/* Container principal */
+.container {
+  max-width: var(--max-width);
+  margin: 48px auto;
+  padding: 0 20px;
+}
+
+/* Hero / Capa */
+.hero {
+  position: relative;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 6px 24px rgba(10,10,10,0.08);
+}
+
+.hero img {
+  width: 100%;
+  height: 420px;
+  object-fit: cover;
+  display: block;
+  filter: contrast(0.95) saturate(0.9);
+}
+
+.hero .overlay {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: flex-end;
+  padding: 40px;
+  background: linear-gradient(180deg, rgba(0,0,0,0) 40%, rgba(0,0,0,0.45) 100%);
+}
+
+.hero .quote {
+  color: #fff;
+  font-family: 'Playfair Display', serif;
+  font-size: 20px;
+  max-width: 70%;
+}
+
+.hero .quote em {
+  display: block;
+  margin-top: 8px;
+  font-style: normal;
+  opacity: 0.9;
+  font-size: 14px;
+}
+
+/* Cabeçalho */
+header .kicker {
+  color: var(--muted);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-size: 12px;
+}
+
+header h1 {
+  font-family: 'Playfair Display', serif;
+  font-size: 34px;
+  margin: 10px 0 6px;
+}
+
+header p.lead {
+  color: var(--muted);
+  margin-top: 0;
+}
+
+/* Epígrafe */
+.epigraph {
+  background: var(--bg-beige);
+  padding: 28px;
+  margin: 28px 0;
+  border-radius: 6px;
+  font-style: italic;
+  text-align: center;
+  color: var(--dark);
+}
+
+/* Estrutura em duas colunas */
+.two-col {
+  display: grid;
+  grid-template-columns: 220px 1fr;
+  gap: 20px;
+  align-items: start;
+  margin-bottom: 28px;
+}
+
+.side-epigraph {
+  background: #fff;
+  padding: 18px;
+  border-radius: 6px;
+  font-size: 14px;
+  color: var(--muted);
+  border-left: 4px solid var(--muted);
+}
+
+.content-block {
+  padding: 6px 2px;
+}
+
+.content-block h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: 22px;
+  margin-top: 0;
+}
+
+/* Bloco de destaque azul */
+.infographic {
+  background: var(--bg-blue);
+  padding: 22px;
+  border-radius: 6px;
+  margin: 22px 0;
+}
+
+/* Seção escura */
+.dark-section {
+  background: var(--dark);
+  color: #FAFAFA;
+  padding: 26px;
+  border-radius: 6px;
+  margin: 22px 0;
+}
+
+.dark-section .big {
+  font-size: 20px;
+  font-weight: 700;
+}
+
+/* Conclusão */
+.final {
+  background: #fff;
+  padding: 28px;
+  border-radius: 6px;
+  margin: 28px 0;
+  text-align: center;
+}
+
+footer {
+  margin: 36px 0 80px;
+  color: var(--muted);
+  font-size: 13px;
+  text-align: center;
+}
+
+/* Responsividade */
+@media (max-width: 800px) {
+  .two-col {
+    grid-template-columns: 1fr;
+  }
+  .hero img {
+    height: 260px;
+    object-position: right center;
+
+  }
+  header h1 {
+    font-size: 28px;
+  }
+}
+
+.infographic img {
+  display: block;
+  width: 100%;
+  max-height: 320px; /* altura máxima ideal */
+  object-fit: cover;
+  border-radius: 6px;
+  margin-top: 16px;
+}
+
+.two-col img {
+  width: 100%;
+  height: 100%;
+  max-height: 280px;
+  object-fit: cover;
+  border-radius: 6px;
+  display: block;
+}
